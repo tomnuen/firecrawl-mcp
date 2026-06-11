@@ -1,21 +1,22 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { McpAgent } from "agents/mcp";
 import { z } from "zod";
-import Firecrawl from "@mendable/firecrawl-js";
+// import Firecrawl from "@mendable/firecrawl-js";
 
 export class MyMCP extends McpAgent {
 	server = new McpServer({ name: "firecrawl", version: "1.0.0" });
 
 	async init() {
-		const firecrawl = new Firecrawl();
-	    this.server.tool(
-	      "scrape",
-	      { url: z.string().url() },
-	      async ({ url }) => {
-	        const doc = await firecrawl.scrape(url, { formats: ["markdown"] });
-	        return { content: [{ type: "text", text: doc.markdown ?? "" }] };
-	      }
-	    );
+		// const firecrawl = new Firecrawl();	    
+		
+		// this.server.tool(
+	 //      "scrape",
+	 //      { url: z.string().url() },
+	 //      async ({ url }) => {
+	 //        const doc = await firecrawl.scrape(url, { formats: ["markdown"] });
+	 //        return { content: [{ type: "text", text: doc.markdown ?? "" }] };
+	 //      }
+	 //    );
 	}
 }
 
