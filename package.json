@@ -12,8 +12,9 @@
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@mendable/firecrawl-js": "^4.x",
 		"agents": "^0.9.0",
-		"zod": "^4.3.6"
+		"zod": "^4.3.6",
 	},
 	"devDependencies": {
 		"oxfmt": "^0.43.0",
